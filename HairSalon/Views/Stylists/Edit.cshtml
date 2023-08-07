@@ -11,16 +11,24 @@
 @using (Html.BeginForm())
 {
   @Html.HiddenFor(model => model.StylistId)
-
-  @Html.LabelFor(model => model.Name)
-  @Html.EditorFor(model => model.Name)
-
-  @Html.LabelFor(model => model.Specialty)
-  @Html.EditorFor(model => model.Specialty)
-
+  <br>
+  <div class="container text-center">
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+  </div>
+  <br>
+  <div class="container text-center">
+    @Html.LabelFor(model => model.Specialty)
+    @Html.EditorFor(model => model.Specialty)
+  </div>
+  <br>
+  <div class="container text-center">
   @Html.LabelFor(model => model.MonthYearHired)
   @Html.EditorFor(model => model.MonthYearHired)
-
+  </div>
+  <br>
   <input type="submit" class="btn btn-primary" value="Save" />
 }
-<p>@Html.ActionLink("Back to list", "Index")</p>
+  </div>
+<br>
+<p class="container text-center">@Html.ActionLink("Back to list", "Index")</p>

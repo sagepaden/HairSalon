@@ -11,19 +11,26 @@
 
 @using (Html.BeginForm())
 {
-
-  @Html.LabelFor(model => model.FirstName)
-  @Html.TextBoxFor(model => model.FirstName)
-
-  @Html.LabelFor(model => model.LastName)
-  @Html.TextBoxFor(model => model.LastName)
-
-  @Html.LabelFor(model => model.Phone)
-  @Html.TextBoxFor(model => model.Phone)
-
-  @Html.LabelFor(model => model.Stylist)
-  @Html.DropDownList("StylistId")
-
-  <input type="submit" value="Add new client" class="btn btn-default" />
+  <div class="container text-center">
+    @Html.LabelFor(model => model.FirstName)
+    @Html.TextBoxFor(model => model.FirstName)
+  </div>
+  <br>
+  <div class="container text-center">
+    @Html.LabelFor(model => model.LastName)
+    @Html.TextBoxFor(model => model.LastName)
+  </div>
+  <br>
+  <div class="container text-center">
+    @Html.LabelFor(model => model.Phone)
+    @Html.TextBoxFor(model => model.Phone)
+  </div>
+  <br>
+  <div class="container text-center">
+    @Html.LabelFor(model => model.Stylist)
+    @Html.DropDownList("StylistId")
+  </div>
+  <br>
+  <input type="submit" value="Add new client" class="btn btn-primary" />
 }
 <p>@Html.ActionLink("Show all clients", "Index")</p>

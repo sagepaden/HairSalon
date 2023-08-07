@@ -8,6 +8,7 @@
 <h2>Stylist Details</h2>
 <hr />
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)<h3>
+  <hr />
 
 @if (@Model.Clients.Count == 0)
 {
@@ -15,15 +16,18 @@
 } 
 else
 {
-  <h3>Clients:</h3>
-  <ul>
+  <h4>Clients:</h4>
+  <ul class="container">
     @foreach (Client client in Model.Clients)
     {
       <li>@Html.ActionLink($"{client.LastName}", "Details", "Clients", new { id = client.ClientId })</li>
     }
   </ul>
 }
-
+<br>
+<br>
+<br>
+<hr />
 <p>@Html.ActionLink("Edit Stylist", "Edit", new { id = Model.StylistId })</p>
 <p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.StylistId })</p>
 <p>@Html.ActionLink("Back to list", "Index")</p>
